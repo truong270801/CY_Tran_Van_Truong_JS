@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <ul>
         <li>1</li>
@@ -17,14 +19,17 @@
 
     <script>
         const btn = document.querySelector('button');
-        const li = document.getElementsByTagName('li');
+        const ul = document.querySelector('ul');
 
-        btn.addEventListener('click', ()=>{
-            li. Array.from(li.children);
-            console.log(li);
-            
-            
+        btn.addEventListener('click', () => {
+            const reverse = [...ul.children].reverse();
+            reverse.forEach(element => {
+                ul.appendChild(element)
+            });
+
+
         })
     </script>
 </body>
+
 </html>

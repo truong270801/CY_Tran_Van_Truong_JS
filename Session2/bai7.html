@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 1px solid #000;
+            width: 400px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            margin: 200px auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 50px;
+        }
+
+        .container__from {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .container__from-input {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+        }
+
+        p {
+            color: red;
+            display: none;
+            font-size: 12px;
+
+        }
+
+        button {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>SingUp</h1>
+        <div class="container__from">
+            <div class="container__from-input">
+                <label>Username</label>
+                <div>
+                    <input type="text">
+                    <p>Vui long dien vao truong nay</p>
+                </div>
+
+            </div>
+            <div class="container__from-input">
+                <label>Password</label>
+                <div>
+                    <input type="password">
+                    <p>Vui long dien vao truong nay</p>
+                </div>
+            </div>
+            <div class="container__from-input">
+                <label>Email</label>
+                <div>
+                    <input type="text">
+                    <p>Vui long dien vao truong nay</p>
+                </div>
+            </div>
+            <div class="container__from-input">
+                <label>FullName</label>
+                <div>
+                    <input type="text">
+                    <p>Vui long dien vao truong nay</p>
+                </div>
+            </div>
+
+        </div>
+        <button>Submit</button>
+
+    </div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const usernameText = document.getElementsByTagName('input')[0];
+        const passwordText = document.getElementsByTagName('input')[1];
+        const mailText = document.getElementsByTagName('input')[2];
+        const fullNameText = document.getElementsByTagName('input')[3];
+        btn.addEventListener('click', () => {
+
+            let filterEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+            if (usernameText.value.length == 0) {
+                document.getElementsByTagName('p')[0].style = "display: block;";
+            }
+            else if (5 > usernameText.value.length || usernameText.value.length > 10) {
+                document.getElementsByTagName('p')[0].style = "display: block;";
+                document.getElementsByTagName('p')[0].innerText = "chiều dài lớn hơn 5 và nhỏ hơn 10"
+
+            }else{
+                document.getElementsByTagName('p')[0].style = "display: none;";
+
+            }
+            //////////////////////////////
+           if (passwordText.value.length == 0) {
+                document.getElementsByTagName('p')[1].style = "display: block;";
+
+            }
+            else if (5 > passwordText.value.length || passwordText.value.length > 10) {
+                document.getElementsByTagName('p')[1].style = "display: block;";
+                document.getElementsByTagName('p')[1].innerText = "chiều dài lớn hơn 5 và nhỏ hơn 10"
+
+            }else{
+                document.getElementsByTagName('p')[1].style = "display: none;";
+
+            }
+///////////////////////////////////////////////////////////////////////////////////////
+
+            if (mailText.value.length == 0){
+                document.getElementsByTagName('p')[2].style = "display: block;";
+
+            }else if(!filterEmail.test(mailText.value)) {
+                document.getElementsByTagName('p')[2].style = "display: block;";
+                document.getElementsByTagName('p')[2].innerText = "Email sai"
+
+            }
+            else{
+                document.getElementsByTagName('p')[2].style = "display: none;";
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -23,9 +23,14 @@
     <button>Coppy</button>
 
     <script>
-        const ul = document.querySelector('ul');
+        const ul = document.querySelector('ul') ;
+        const ul2 = document.getElementsByTagName('ul') [1];
+        
         const btn = document.querySelector('button');
-        btn.addEventListener
+        btn.addEventListener('click', () =>{
+            ul2.innerHTML = ul.innerHTML;
+
+        })
     </script>
 </body>
 
