@@ -8,7 +8,8 @@ function dataCountryProcessing() {
     const re = /Thủ đô của (.*?) là {{(.*?)}}/g;
 
     countryArray = [...text.matchAll(re)].map((match, index) => ({
-        id: index + 1,
+        id: index + 1, 
+        
         country: match[1],
         capital: match[2]
     }));
