@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+    padding-top: 10px;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid#0ac2fa;
+    color: white;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, #38A2D7, #561139);
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+
+}
+
+#image-music {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit:cover;
+    border-radius: 20px;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    font-size: 18px;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+
+}
+
+ul::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ul::-webkit-scrollbar-track {
+    background: #532049; 
+    border-radius: 10px;
+  }
+  
+  ul::-webkit-scrollbar-thumb {
+    background-color: #82a6cf ;
+    border-radius: 10px;
+    
+  }
+  
+  ul::-webkit-scrollbar-thumb:hover {
+    background: #6594ca; 
+  }
+
+li {
+    display: flex;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 80px; 
+    align-items: center; 
+}
+
+
+li:hover {
+    background-color: #9bc013;
+}
+
+.list-music li.active {
+    background-color: #1a914f;
+
+
+}
+
+.title-play {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    overflow-x: hidden;
+    margin: 10px 0;
+    color: #ffffff;
+
+}
+
+.single {
+    font-size: 18px;
+
+}
+
+
+#seek-bar {
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    height: 10px;
+}
+
+.btn-action {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+button {
+    cursor: pointer;
+    width: 60px;
+    border: none;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.volume-controls {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#volume-bar {
+    width: 100px;
+}
